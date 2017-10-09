@@ -30,7 +30,7 @@ class CustomDataset(data.Dataset):
             return
 
         DataFrame = pd.read_csv(path)
-        X, Y = list(), list() #torch.zeros(DataFrame.shape[0], type) #list()
+        X, Y = list(), list()
         for index, row in DataFrame.iterrows():
             custom_manioulation_function(row)
             X.append(torch.Tensor(row[:-1]))
